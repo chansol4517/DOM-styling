@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자스 필수패턴 11 -DOM 스타일링</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <article></article>
+
+    <script>
+      const box = document.querySelector("article");
+      box.style.width = "300px";
+
+      //색상값 바꾸기
+      //box.style.backgroundColor = 'pink';
+      //box.style['background-color'] = 'hotpink';
+
+      //.backgroundcolor해도 똑같음
+      const boxStyle = getComputedStyle(box)["background-color"];
+      console.log(boxStyle);
+    </script>
+  </body>
+</html>
